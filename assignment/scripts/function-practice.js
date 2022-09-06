@@ -22,28 +22,29 @@ console.log ('Test - should say say "Hello name-of-person"', helloName('Lydia'))
 
 // 3. Function to add two numbers together & return the result
 function addNumbers( firstNumber, secondNumber ) {
-  return firstNumber + secondNumber
+  return firstNumber + secondNumber;
   // return firstNumber + secondNumber;
 }
-console.log ('Test - should add 1 & 2' , addNumbers(1, 2))
+console.log ('Test - should add 1+2' , addNumbers(1, 2))
 
 
 // 4. Function to multiply three numbers & return the result
-function multiplyThree( ){
-
+function multiplyThree( Num1, Num2, Num3 ){
+  let answer = Num1 * Num2 * Num3;
+  return answer
 }
-
+console.log( 'Test - should multiply 3*3*3 ' , multiplyThree(3, 3, 3))
 
 // 5. Function that will return true if a number is positive, 
 //    or greater than zero, and false otherwise
 function isPositive( number ) {
   if ( number > 0 ){
-    return;
+    return true;
   }
-    return;
+    else return false;
 }
 // Call the function to test each outcome (true & false) 
-// Write a separate console.log statement for each outcome
+// Write a separate console.log statement for each outcome //I'm not sure what this means, do I write more console logs than already exist?
 console.log( 'isPositive - should say true', isPositive(3) );
 console.log( 'isPositive - should say false', isPositive(0) );
 console.log( 'isPositive - should say false', isPositive(-3) );
@@ -51,16 +52,32 @@ console.log( 'isPositive - should say false', isPositive(-3) );
 
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
-function getLast( array ) {
+let favoriteMovies = ["LOTR", "Awakenings", "Scream", "You've Got Mail"];
 
-}
+function getLast( array ) {
+if (array.length > 0 ) {
+    return array[array.length -1];
+  }
+    else {return "undefined"}
+  }
+
+  console.log(getLast(favoriteMovies));
+  
 
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
+
+let myGrades = [97, 99, 98, 93];
 function find( value, array ){
-  
+  for(let i=0; i< array.length; i++){
+    if(array[i] === value) 
+    return true
+   else return false
+  }
 }
+
+console.log(find( 99, myGrades))
 
 // ----------------------
 // Stretch Goals
