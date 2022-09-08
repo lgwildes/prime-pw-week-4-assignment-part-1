@@ -31,7 +31,7 @@ console.log ('Test - should add 1+2' , addNumbers(1, 2))
 // 4. Function to multiply three numbers & return the result
 function multiplyThree( Num1, Num2, Num3 ){
   let answer = Num1 * Num2 * Num3;
-  return answer
+  return answer;
 }
 console.log( 'Test - should multiply 3*3*3 ' , multiplyThree(3, 3, 3))
 
@@ -69,34 +69,49 @@ if (array.length > 0 ) {
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
 
 let myGrades = [97, 99, 98, 93];
+let result ;
 function find( value, array ){
   for(let i=0; i< array.length; i++){
     if(array[i] === value) 
-    return true
-   else return false
+    {result = true}
+  }
+  if (result == true) {
+    return true;
+  }
+  else {
+    return false;
   }
 }
 
-console.log(find( 99, myGrades))
+console.log(find( 90, myGrades));
 
 // ----------------------
 // Stretch Goals
 // ----------------------
 // 8. Function to check if a letter is the first letter in a 
 //    string. Return true if it is, and false otherwise
+
 function isFirstLetter(letter, string) {
+if(string.charAt(0) === letter)
+return true;
+else {
+  return false
+}
 
 }
 console.log( 'isFirstLetter - should say true', isFirstLetter('a', 'apple') );
 console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
 
 // 9. Function to return the sum of all numbers in an array
-function sumAll( ) {
-  let sum = 0
+let numbs = [4, 5, 7, 22, 57, 21, 2]
+function sumAll(numbs) {
+  let sum = 0;
   // TODO: loop to add items
+  for (let i=0; i<numbs.length; i++)
+  sum+= numbs[i]
   return sum;
 }
-
+console.log('expect sum of all numbers in array' , sumAll(numbs))
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
