@@ -61,7 +61,7 @@ if (array.length > 0 ) {
     else {return "undefined"}
   }
 
-  console.log(getLast(favoriteMovies));
+  console.log("this should say You've Got Mail:" ,getLast(favoriteMovies));
   
 
 // 7. Function to find a value in an array. Return true if the 
@@ -83,7 +83,8 @@ function find( value, array ){
   }
 }
 
-console.log(find( 90, myGrades));
+console.log('This should return false' ,find( 90, myGrades));
+console.log('This should return true' ,find( 93, myGrades));
 
 // ----------------------
 // Stretch Goals
@@ -103,20 +104,31 @@ console.log( 'isFirstLetter - should say true', isFirstLetter('a', 'apple') );
 console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
 
 // 9. Function to return the sum of all numbers in an array
-let numbs = [4, 5, 7, 22, 57, 21, 2]
+let numbs = [18, 590, 35, 1]
 function sumAll(numbs) {
   let sum = 0;
   // TODO: loop to add items
-  for (let i=0; i<numbs.length; i++)
+  for (let i=0; i<numbs.length; 
+    i++)
   sum+= numbs[i]
   return sum;
 }
 console.log('expect sum of all numbers in array' , sumAll(numbs))
+
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
-
-
+ let randomNumbers = [30, 7, -3, 0, 18, -9, 107]
+ function onlyReturnPositives(array) {
+  let positiveNumbers = [] ;
+  for(let i=0; i<array.length; i++){
+ if(array[i] > 0){
+  positiveNumbers.push(array[i])
+ }
+ }
+ return positiveNumbers
+ }
+console.log(onlyReturnPositives(randomNumbers))
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
 //     CodeWars(https://www.codewars.com/). Then describe it 
