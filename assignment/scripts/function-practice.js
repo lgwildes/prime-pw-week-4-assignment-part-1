@@ -25,7 +25,7 @@ function addNumbers( firstNumber, secondNumber ) {
   return firstNumber + secondNumber;
   // return firstNumber + secondNumber;
 }
-console.log ('Test - should add 1+2' , addNumbers(1, 2))
+console.log ('Test - should add 1+2' , addNumbers(1, 2));
 
 
 // 4. Function to multiply three numbers & return the result
@@ -33,7 +33,7 @@ function multiplyThree( Num1, Num2, Num3 ){
   let answer = Num1 * Num2 * Num3;
   return answer;
 }
-console.log( 'Test - should multiply 3*3*3 ' , multiplyThree(3, 3, 3))
+console.log( 'Test - should multiply 3*3*3 ' , multiplyThree(3, 3, 3));
 
 // 5. Function that will return true if a number is positive, 
 //    or greater than zero, and false otherwise
@@ -58,7 +58,7 @@ function getLast( array ) {
 if (array.length > 0 ) {
     return array[array.length -1];
   }
-    else {return "undefined"}
+    else {return "undefined"};
   }
 
   console.log("this should say You've Got Mail:" ,getLast(favoriteMovies));
@@ -71,7 +71,8 @@ if (array.length > 0 ) {
 let myGrades = [97, 99, 98, 93];
 let result ;
 function find( value, array ){
-  for(let i=0; i< array.length; i++){
+  for(let i=0; i< array.length; 
+    i++){
     if(array[i] === value) 
     {result = true}
   }
@@ -96,7 +97,7 @@ function isFirstLetter(letter, string) {
 if(string.charAt(0) === letter)
 return true;
 else {
-  return false
+  return false;
 }
 
 }
@@ -126,9 +127,9 @@ console.log('expect sum of all numbers in array' , sumAll(numbs))
   positiveNumbers.push(array[i])
  }
  }
- return positiveNumbers
+ return positiveNumbers;
  }
-console.log(onlyReturnPositives(randomNumbers))
+console.log(onlyReturnPositives(randomNumbers));
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
 //     CodeWars(https://www.codewars.com/). Then describe it 
